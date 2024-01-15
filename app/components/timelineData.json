@@ -1,0 +1,38 @@
+[
+    {
+      "imagesrc":"/Home1.png",
+      "textData": {
+        "title": "Multiple Communities, Single App",
+        "description": "Parivaar Platform lets you plan and manage all your social communities at one place."
+      }
+    },
+    {
+        "imagesrc":"/Home2.png",
+        "textData": {
+          "title": "Digital Directory",
+          "description": "Parivaar Platform lets you plan and manage all your social communities at one place."
+        }
+      },
+      {
+        "imagesrc":"/Home3.png",
+        "textData": {
+          "title": "Extensive Search & Filters",
+          "description": "Parivaar Platform lets you plan and manage all your social communities at one place"
+        }
+      },
+      {
+        "imagesrc":"/Home4.png",
+        "textData": {
+          "title": "Greetings",
+          "description": "Parivaar Platform lets you plan and manage all your social communities at one place."
+        }
+      },
+      {
+        "imagesrc":"/Home5.png",
+        "textData": {
+          "title": "Business Networking",
+          "description": "Parivaar Platform lets you plan and manage all your social communities at one place."
+        }
+      }
+      
+  ]
