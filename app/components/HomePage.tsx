@@ -37,8 +37,7 @@ const HomePage = () => {
                 sx={{
                   fontFamily: "'Poppins',sans-serif",
                   fontWeight: "800",
-                  fontSize: { xs: "1.9rem", sm: "3rem" },
-
+                  fontSize: { xs: "1.9rem", sm: "2.5rem" },
                   color: "#000000",
                 }}
               >
@@ -50,7 +49,7 @@ const HomePage = () => {
                   fontFamily: "'Poppins',sans-serif",
                   fontWeight: "800",
 
-                  fontSize: { xs: "1.9rem", sm: "3rem" },
+                  fontSize: { xs: "1.9rem", sm: "2.5rem" },
                   color: "#0777FF",
                 }}
               >
@@ -68,7 +67,7 @@ const HomePage = () => {
                 sx={{
                   fontFamily: "'Poppins',sans-serif",
                   fontWeight: "800",
-                  fontSize: { xs: "1.9rem", sm: "3rem" },
+                  fontSize: { xs: "1.9rem", sm: "2.5rem" },
                   color: "#0777FF",
                 }}
               >
@@ -79,7 +78,7 @@ const HomePage = () => {
                 sx={{
                   fontFamily: "'Poppins',sans-serif",
                   fontWeight: "800",
-                  fontSize: { xs: "1.9rem", sm: "3rem" },
+                  fontSize: { xs: "1.9rem", sm: "2.5rem" },
                   color: "#000000",
                 }}
               >
@@ -112,6 +111,7 @@ const HomePage = () => {
               display: "flex",
               flexDirection: "row",
               gap: { xs: "1rem", sm: "1.3rem" },
+              paddingTop: "1.5rem",
               paddingInline: { xs: "1rem", sm: "10rem" },
             }}
           >
@@ -121,6 +121,7 @@ const HomePage = () => {
                 border: "1.4px solid #0777FF",
                 backgroundColor: "#0777FF",
                 padding: "1rem 2rem",
+
                 display: "flex",
                 color: "#FFFFFF",
                 fontFamily: "'Poppins',sans-serif",
