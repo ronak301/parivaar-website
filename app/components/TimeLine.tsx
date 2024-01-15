@@ -30,14 +30,15 @@ const TimelineCard: React.FC<TimelineCardProps> = ({ imagesrc, textData }) => {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
+          width: "9rem",
         }}
         variant="body2"
         color="text.secondary"
       >
         <Box
           sx={{
-            width: "20rem",
-            height: "32rem",
+            width: "100%",
+            height: "20rem",
           }}
         >
           <Image
@@ -47,7 +48,7 @@ const TimelineCard: React.FC<TimelineCardProps> = ({ imagesrc, textData }) => {
               height: "100%",
               objectFit: "contain",
               backgroundColor: "white",
-              boxShadow: "0.1px 0.1px 0.1px rgba(0, 0, 0, 0.2)",
+              boxShadow: "0px 0px 0px rgba(0, 0, 0, 0.2)",
             }}
             width={170}
             height={240}
@@ -75,9 +76,9 @@ const TimelineCard: React.FC<TimelineCardProps> = ({ imagesrc, textData }) => {
           display: "flex",
           flexDirection: "column",
           gap: "1.5rem",
-
           justifyContent: "center",
           alignItems: "center",
+          width: "9rem",
         }}
       >
         <Box
@@ -90,12 +91,12 @@ const TimelineCard: React.FC<TimelineCardProps> = ({ imagesrc, textData }) => {
           <Typography
             sx={{
               fontFamily: "'Poppins',sans-serif",
-              fontSize: "1.5rem",
+              fontSize: { xs: "1.1rem", sm: "1.5rem" },
               fontWeight: "600",
               lineHeight: "normal",
 
               color: "#0777FF",
-              width: "18rem",
+              width: { xs: "100%", sm: "23rem" },
               textAlign: "start",
             }}
           >
@@ -104,13 +105,12 @@ const TimelineCard: React.FC<TimelineCardProps> = ({ imagesrc, textData }) => {
           <Typography
             sx={{
               fontFamily: "'Poppins',sans-serif",
-              fontSize: "1rem",
+              fontSize: { xs: "0.8rem", sm: "1rem" },
               fontWeight: "400",
               lineHeight: "normal",
-
               textAlign: "start",
               color: "#767070",
-              width: "23rem",
+              width: { xs: "100%", sm: "23rem" },
             }}
           >
             {textData.description}

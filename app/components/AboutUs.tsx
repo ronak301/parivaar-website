@@ -18,17 +18,23 @@ const AboutUs = () => {
         justifyContent: "center",
       }}
     >
-      <Box sx={{ width: "100%", display: "flex", justifyContent: "center" }}>
+      <Box
+        sx={{
+          width: "100%",
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
         <Divider sx={{ color: "#CBCBCB", width: "95rem" }} />
       </Box>
       <Box
         sx={{
-          marginInline: "6.3rem",
-          marginTop: "4rem",
-          marginBottom: "4rem",
+          marginInline: { xs: "1rem", md: "6.3rem" },
+          marginTop: { xs: "2rem", md: "4rem" },
+          marginBottom: { xs: "2rem", md: "4rem" },
           display: "flex",
-
-          flexDirection: "row",
+          gap: { xs: "2rem", sm: "5rem" },
+          flexDirection: { xs: "column", sm: "row" },
           justifyContent: "space-between",
           alignItems: "flex-start",
         }}
@@ -37,7 +43,7 @@ const AboutUs = () => {
           sx={{
             display: "flex",
             flexDirection: "column",
-            gap: "1.5rem",
+            gap: { xs: "1.0rem", sm: "1.5rem" },
             justifyContent: "center",
             alignItems: "flex-start",
           }}
@@ -46,11 +52,16 @@ const AboutUs = () => {
             sx={{
               display: "flex",
               gap: "0.8rem",
-              justifyContent: "center",
+              justifyContent: { xs: "flex-start", sm: "center" },
               alignItems: "center",
             }}
           >
-            <Box sx={{ width: "1.8rem", height: "1.8rem" }}>
+            <Box
+              sx={{
+                width: { xs: "10%", sm: "1.8rem" },
+                height: { xs: "10%", sm: "1.8rem" },
+              }}
+            >
               <Image
                 src={Logo}
                 alt=""
@@ -71,12 +82,12 @@ const AboutUs = () => {
               Parivaar
             </Typography>
           </Box>
-
           <Box>
             <Typography
               sx={{
-                fontSize: "1.3rem",
+                fontSize: { xs: "1.5rem", sm: "1.7rem" },
                 fontWeight: "400",
+
                 fontFamily: "'Poppins',sans-serif",
                 color: "#000000",
                 lineHeight: "normal",
@@ -92,7 +103,7 @@ const AboutUs = () => {
                 color: "#52525B",
                 lineHeight: "normal",
                 marginTop: "0.1rem",
-                width: "30rem",
+                maxWidth: { xs: "100%", sm: "30rem" },
               }}
             >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
@@ -100,7 +111,14 @@ const AboutUs = () => {
             </Typography>
           </Box>
 
-          <Box sx={{ display: "flex", gap: "1rem", flexDirection: "row" }}>
+          <Box
+            sx={{
+              display: "flex",
+              gap: { xs: "5rem", sm: "1rem" },
+              paddingTop: { xs: "0rem", sm: "0rem" },
+              flexDirection: "row",
+            }}
+          >
             <XIcon
               style={{ fontSize: "1.6rem" }}
               sx={{
@@ -139,15 +157,15 @@ const AboutUs = () => {
           sx={{
             display: "flex",
             flexDirection: "column",
+
             gap: "0.6rem",
             justifyContent: "flex-start",
-
             height: "100%",
           }}
         >
           <Typography
             sx={{
-              fontSize: "1.3rem",
+              fontSize: { xs: "1.2rem", sm: "1.3rem" },
               fontWeight: "700",
               fontFamily: "'Poppins',sans-serif",
               color: "#18181B",

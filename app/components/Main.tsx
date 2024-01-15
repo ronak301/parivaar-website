@@ -10,9 +10,8 @@ const Main = () => {
         flexDirection: "column",
         alignItems: "center",
         gap: "1.3rem",
-        marginInline: "13rem",
+        marginInline: { xs: "1rem", sm: "13rem" },
         marginTop: "4rem",
-
         justifyContent: "center",
       }}
     >
@@ -25,8 +24,8 @@ const Main = () => {
           border: "0.4px solid #0777FF",
           backgroundColor: "#F0F7FF",
           textAlign: "center",
-          padding: "0.325rem 0.2rem",
-          width: "8rem",
+          padding: { xs: "0.325rem 0.2rem", sm: "0.5rem 2rem" },
+          width: { xs: "100%", sm: "8rem" },
         }}
       >
         advantages
@@ -36,19 +35,20 @@ const Main = () => {
           sx={{
             fontFamily: "'Poppins',sans-serif",
             fontWeight: "600",
-            fontSize: "2.7rem",
+            fontSize: { xs: "2rem", sm: "2.7rem" },
             color: "#000000",
+            textAlign: { xs: "center", sm: "left" },
           }}
         >
           Benefits of Parivaar App
         </Typography>
       </Box>
-      <Box sx={{ width: "30rem", textAlign: "center" }}>
+      <Box sx={{ width: { xs: "100%", sm: "30rem" }, textAlign: "center" }}>
         <Typography
           sx={{
             fontFamily: "'Poppins',sans-serif",
             fontWeight: "400",
-            fontSize: "1.1rem",
+            fontSize: { xs: "1rem", md: "1.1rem" },
             color: "#767070",
             lineHeight: "normal",
             fontStyle: "normal",

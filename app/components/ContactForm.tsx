@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { useForm, SubmitHandler, Controller } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import { firebaseConfig } from "./firebaseConfig";
+import { firebaseConfig } from "./firebaseconfig";
 import { initializeApp } from "firebase/app";
 import { Alert, AlertIcon, FormErrorMessage } from "@chakra-ui/react";
 import { getFirestore, collection, addDoc } from "firebase/firestore";
@@ -81,14 +81,15 @@ const ContactForm = () => {
         </Alert>
       )}
       <Box
-        width={"28rem"}
-        height={"25rem"}
+        width={"95%"}
+        height={"auto"}
         p="4"
         boxShadow={
           " 0px 8px 11px -4px rgba(45, 54, 67, 0.04), 0px 20px 24px -4px rgba(45, 54, 67, 0.04)"
         }
         borderWidth="1px"
         borderRadius="lg"
+        margin={{ base: "0", md: "auto" }}
       >
         <form onSubmit={handleSubmit(onSubmit)}>
           <FormControl isInvalid={!!errors.fullName}>

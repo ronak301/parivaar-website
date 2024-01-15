@@ -1,13 +1,14 @@
 import React from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
+
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
-import IconButton from "@mui/material/IconButton";
+
 import Image from "next/image";
 import logo from "../../public/Parivaar.png";
 import ScrollLink from "./ScrollLink";
+import HammerIcon from "./HammerIcon";
 
 const Navbar = () => {
   return (
@@ -18,6 +19,7 @@ const Navbar = () => {
             backgroundColor: "rgba(255, 255, 255, 0.50)",
             backdropFilter: "blur(50px)",
             borderBottom: "1.2px solid #EEEEEF",
+            width: "100vw",
             boxShadow: "none",
             padding: "0.65rem 4.9375rem 0.65rem 3.875rem",
             display: "flex",
@@ -32,8 +34,12 @@ const Navbar = () => {
               gap: "0.7rem",
               justifyContent: "center",
               alignItems: "center",
+              marginInline: { xs: "auto", sm: "0" },
             }}
           >
+            <Box sx={{ position: "absolute", left: 10 }}>
+              <HammerIcon />
+            </Box>
             <Box sx={{ width: "2rem", height: "2rem" }}>
               <Image src={logo} alt="Picture of the author" objectFit="cover" />
             </Box>
@@ -51,7 +57,8 @@ const Navbar = () => {
           </Box>
           <Box
             sx={{
-              display: "flex",
+              display: { xs: "none", sm: "flex" },
+
               gap: "2rem",
               alignItems: "center",
               justifyContent: "center",

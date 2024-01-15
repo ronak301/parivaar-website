@@ -27,9 +27,8 @@ const ContactUs = () => {
           border: "0.4px solid #0777FF",
           backgroundColor: "#F0F7FF",
           textAlign: "center",
-          padding: "0.325rem 0.2rem",
-          width: "8rem",
-          marginTop: "5rem",
+          padding: { xs: "0.3rem 5.6rem", sm: "0.5rem 2rem" },
+          marginTop: { xs: "2rem", sm: "5rem" },
         }}
       >
         Get In Touch
@@ -41,16 +40,17 @@ const ContactUs = () => {
           flexDirection: "column",
           alignItems: "center",
           gap: "1.3rem",
-          marginTop: "2rem",
+          marginTop: { xs: "1rem", sm: "2rem" },
         }}
       >
         <Typography
           sx={{
             fontFamily: "'Poppins',sans-serif",
             fontWeight: "600",
-            fontSize: "2.7rem",
+
             color: "#000000",
-            width: "17rem",
+            width: { xs: "100%", sm: "17rem" },
+            fontSize: { xs: "2rem", sm: "2.7rem" },
 
             textAlign: "center",
           }}
@@ -61,8 +61,9 @@ const ContactUs = () => {
           sx={{
             fontFamily: "'Poppins',sans-serif",
             fontWeight: "400",
-            fontSize: "1rem",
-            width: "27rem",
+            fontSize: { xs: "0.8rem", sm: "1rem" },
+            width: { xs: "100%", sm: "27rem" },
+
             color: "#000000",
 
             textAlign: "center",
@@ -76,7 +77,14 @@ const ContactUs = () => {
       <Grid
         container
         spacing={0}
-        sx={{ width: "70%", marginTop: "5rem", marginBottom: "10rem" }}
+        sx={{
+          width: { xs: "100%", sm: "70%" },
+          flexDirection: { xs: "column", sm: "row" },
+          alignItems: { xs: "center", sm: "none" },
+          gap: { xs: "2rem", sm: "0" },
+          marginTop: "5rem",
+          marginBottom: "10rem",
+        }}
       >
         <Grid
           item
@@ -88,7 +96,13 @@ const ContactUs = () => {
             alignItems: "center",
           }}
         >
-          <Box sx={{ width: "26rem", height: "29rem", borderRadius: "1.2rem" }}>
+          <Box
+            sx={{
+              width: { xs: "100%", sm: "26rem" },
+              height: { xs: "auto", sm: "29rem" },
+              borderRadius: "1.2rem",
+            }}
+          >
             <Image
               src={Contact}
               width={300}
@@ -104,15 +118,26 @@ const ContactUs = () => {
         </Grid>
         <Grid
           item
-          xs={6.2}
+          xs={12}
+          sm={6.2}
           style={{
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            width: "100%",
           }}
         >
-          <ContactForm />
+          <Box
+            sx={{
+              width: {
+                xs: "100vw",
+                sm: "70%",
+              },
+              display: "flex",
+              justifyContent: { xs: "center", sm: "flex-start" },
+            }}
+          >
+            <ContactForm />
+          </Box>
         </Grid>
       </Grid>
     </Box>
