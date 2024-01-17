@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useForm, SubmitHandler, Controller } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
@@ -37,6 +37,7 @@ const ContactForm = () => {
   const {
     handleSubmit,
     control,
+    reset,
     formState: { errors },
   } = useForm<FormFields>({
     resolver: yupResolver(schema),
@@ -49,6 +50,8 @@ const ContactForm = () => {
   const [success, setSuccess] = useState(false);
 
   const onSubmit: SubmitHandler<FormFields> = async (data) => {
+    console.log("form submited");
+
     const timestamp = new Date();
     setLoading(true);
     const docRef = await addDoc(collection(db, "contacts"), {
@@ -59,11 +62,17 @@ const ContactForm = () => {
     });
     setLoading(false);
     setSuccess(true);
+
+    reset({
+      fullName: "",
+      phoneNumber: "",
+      organizationName: "",
+    });
     setTimeout(() => {
       setSuccess(false);
     }, 2000);
-    console.log("form suboired", data);
   };
+
   return (
     <ChakraProvider>
       {success && (

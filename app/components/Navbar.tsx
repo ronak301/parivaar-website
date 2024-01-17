@@ -9,6 +9,7 @@ import Image from "next/image";
 import logo from "../../public/Parivaar.png";
 import ScrollLink from "./ScrollLink";
 import HammerIcon from "./HammerIcon";
+import Link from "next/link";
 
 const Navbar = () => {
   return (
@@ -91,8 +92,9 @@ const Navbar = () => {
             >
               Contact Us
             </ScrollLink>
-            <Button
-              sx={{
+            <Link
+              href={"https://app.parivaarapp.in/"}
+              style={{
                 fontWeight: "400",
                 fontSize: "1.15rem",
                 lineHeight: "normal",
@@ -105,14 +107,14 @@ const Navbar = () => {
                 backgroundColor: "#0777FF",
                 fontFamily: "'Poppins',sans-serif",
                 padding: "0.3rem 2rem",
-                ":hover": {
-                  bgcolor: "#3189f5",
-                  color: "white",
-                },
+                // ":hover": {
+                //   bgcolor: "#3189f5",
+                //   color: "white",
+                // },
               }}
             >
               Login
-            </Button>
+            </Link>
           </Box>
         </AppBar>
       </Box>

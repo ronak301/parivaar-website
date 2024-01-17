@@ -7,19 +7,38 @@ type AnchorProps = Omit<
   React.AnchorHTMLAttributes<HTMLAnchorElement>,
   keyof LinkProps
 >;
-type ScrollLinkProps = AnchorProps & LinkProps & PropsWithChildren;
+type ScrollLinkProps = AnchorProps &
+  LinkProps &
+  PropsWithChildren & {
+    setDrawerOpen?: React.Dispatch<React.SetStateAction<boolean>>;
+    offset?: number;
+  };
 
-const ScrollLink = ({ children, ...props }: ScrollLinkProps) => {
+const ScrollLink = ({
+  children,
+  setDrawerOpen,
+  offset = 0,
+  ...props
+}: ScrollLinkProps) => {
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     e.preventDefault();
     console.log("clicke ");
-    const targetId = e.currentTarget.href.replace(/.*\#/, "");
+    const targetId: string = e.currentTarget.href.replace(/.*\#/, "");
     const elem = document.getElementById(targetId);
-
-    window.scrollTo({
-      top: elem?.getBoundingClientRect().top,
-      behavior: "smooth",
-    });
+    if (targetId === "aboutus1" && elem) {
+      window.scrollTo({
+        top: 20000,
+        behavior: "smooth",
+      });
+    } else {
+      window.scrollTo({
+        top: elem?.getBoundingClientRect().top || 0 + 200,
+        behavior: "smooth",
+      });
+    }
+    if (setDrawerOpen) {
+      setDrawerOpen(false);
+    }
   };
   return (
     <Link {...props} onClick={handleScroll}>

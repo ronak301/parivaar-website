@@ -10,14 +10,27 @@ import Button from "@mui/material/Button";
 import { useState } from "react";
 import Drawer from "@mui/material/Drawer";
 import Typography from "@mui/material/Typography";
+
 import Image from "next/image";
 import MenuIcon from "@mui/icons-material/Menu";
 import ScrollLink from "./ScrollLink";
+import Link from "next/link";
 const HammerIcon = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
 
   const toggleDrawer = (open: any) => () => {
     setDrawerOpen(open);
+  };
+  const scrollToAndCloseDrawer = (id: string) => {
+    const sect = document.getElementById(id);
+    if (sect) {
+      sect.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+        inline: "nearest",
+      });
+      setDrawerOpen(false);
+    }
   };
   return (
     <div style={{}}>
@@ -55,11 +68,7 @@ const HammerIcon = () => {
               }}
             >
               <Box sx={{ width: "2.2rem", height: "2.2rem" }}>
-                <Image
-                  src={logo}
-                  alt="Picture of the author"
-                  objectFit="cover"
-                />
+                <Image src={logo} alt="" objectFit="cover" />
               </Box>
               <Typography
                 sx={{
@@ -74,8 +83,9 @@ const HammerIcon = () => {
               </Typography>
             </Box>
             <ScrollLink
-              className="btn"
-              href="#aboutus"
+              offset={2000}
+              href="#aboutus1"
+              setDrawerOpen={setDrawerOpen}
               style={{
                 fontWeight: "400",
                 fontSize: "1.5rem",
@@ -88,21 +98,22 @@ const HammerIcon = () => {
             </ScrollLink>
 
             <ScrollLink
-              className="btn"
               href="#contact"
+              offset={-2000}
+              setDrawerOpen={setDrawerOpen}
               style={{
                 fontWeight: "400",
                 fontSize: "1.5rem",
                 lineHeight: "normal",
-
                 color: "#666666",
                 fontFamily: "'Poppins',sans-serif",
               }}
             >
               Contact Us
             </ScrollLink>
-            <Button
-              sx={{
+            <Link
+              href={"https://app.parivaarapp.in/"}
+              style={{
                 fontWeight: "400",
                 fontSize: "1.5rem",
                 lineHeight: "normal",
@@ -115,14 +126,14 @@ const HammerIcon = () => {
                 backgroundColor: "#0777FF",
                 fontFamily: "'Poppins',sans-serif",
                 padding: "0.5rem 2rem",
-                ":hover": {
-                  bgcolor: "#3189f5",
-                  color: "white",
-                },
+                // ":hover": {
+                //   bgcolor: "#3189f5",
+                //   color: "white",
+                // },
               }}
             >
               Login
-            </Button>
+            </Link>
           </Box>
         </List>
       </Drawer>

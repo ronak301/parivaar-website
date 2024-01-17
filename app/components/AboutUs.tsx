@@ -15,6 +15,7 @@ const AboutUs = () => {
       sx={{
         display: "flex",
         flexDirection: "column",
+        overflowY: "auto",
         justifyContent: "center",
       }}
     >
@@ -217,7 +218,7 @@ const AboutUs = () => {
               7042770304
             </Typography>
           </Box>
-          <Box sx={{ display: "flex", gap: "0.2rem" }}>
+          <Box id="aboutus1" sx={{ display: "flex", gap: "0.2rem" }}>
             <Typography
               sx={{
                 fontSize: "1.1rem",

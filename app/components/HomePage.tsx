@@ -133,7 +133,7 @@ const HomePage = () => {
               Get Started
             </ScrollLink>
 
-            <Button
+            {/* <Button
               sx={{
                 borderRadius: "2.5rem",
                 border: "1.4px solid #0777FF",
@@ -146,7 +146,7 @@ const HomePage = () => {
               }}
             >
               See Demo
-            </Button>
+            </Button> */}
           </Box>
           <Box
             sx={{
